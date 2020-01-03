@@ -1,11 +1,13 @@
-
-const main = () => {
-  // Get the body element, assume there is only one.
-  // TODO: Fail fast if there is no body element found;
-  const bodyElement = document.getElementsByTagName("body")[0]
-
-  // TODO: Merge filter style as to not override (use classes)
-  bodyElement.style.filter = "grayscale(100%)"
+const applyStyles = (doc, className) => {
+  if (!doc || !doc.body || !doc.head) console.warn("Monochrome: could not make page monochrome")
+  const css = "body." + className + " { filter: grayscale(100%); }"
+  const styleTag = doc.createElement("style")
+  doc.head.appendChild(styleTag)
+  styleTag.type = "text/css"
+  styleTag.appendChild(document.createTextNode(css))
+  doc.body.classList.add(className)
 }
 
-main()
+const className = "monochrome"
+applyStyles(document, className)
+
