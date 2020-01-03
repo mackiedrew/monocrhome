@@ -1,0 +1,20 @@
+{
+  "name": "monochrome",
+  "version": "1.0.0",
+  "description": "Chrome extension for making all websites black and white.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mackiedrew/monocrhome.git"
+  },
+  "keywords": [
+    "chrome",
+    "javascript"
+  ],
+  "author": "Mackie Drew",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mackiedrew/monocrhome/issues"
+  },
+  "homepage": "https://github.com/mackiedrew/monocrhome#readme"
+}
